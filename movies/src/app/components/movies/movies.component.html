@@ -1,0 +1,10 @@
+<div class="app">
+    <h1>Listado de Busqueda</h1>
+    <div class="search">
+        <input type="text" name="search" #search placeholder="Buscar">
+        <img (click)="getMovies(search.value)" src="../../../assets/assets.svg" alt="seach">
+    </div>
+    <div class="container">
+        <app-card-movie *ngFor="let movie of movies" [movie]="movie"></app-card-movie>
+    </div>
+</div>
